@@ -13,6 +13,8 @@ function App() {
     duration : 10,
   });
 
+  const validation = userInput.duration >= 1
+
   function handleChangeInput(identifier , newValue){
     console.log(identifier , newValue , 'funziona')
 
@@ -27,11 +29,15 @@ function App() {
   return (
     <>
       <Header />
+      
       <Main
         userInput={userInput}
         change={handleChangeInput}
       />
+      
       <Results input={userInput}/>
+
+      {!validation && <p className="center">Please insert a duration greater than ZERO!</p>}
     </>
   )
 }

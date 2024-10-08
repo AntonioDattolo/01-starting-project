@@ -3,10 +3,6 @@ import { calculateInvestmentResults, formatter } from "../util/investment";
 export default function Results({input}){
     const results = calculateInvestmentResults(input);
     
-    function consolla(){
-        console.log(results)
-    }
-    consolla();
     return(
         <section>
             
